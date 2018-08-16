@@ -1,0 +1,86 @@
+In Html
+
+Jumbotron header
+container
+	full width card
+		full width table, 5 columns
+			Name
+			Destination
+			Frequency
+			Next Arrival
+			Minutes Away
+	full width card
+		Train name form
+		Destination Form
+		First Train Time form (military time)
+		Frequency form
+		submit button
+
+link necessary scripts
+
+
+
+
+In JavaScript
+
+Connect Firebase
+
+set variable for firebase database
+
+create first arrival function that takes in initial arrival
+
+	take in initial arrival time string and format as moment default
+	convert moment date to todays date
+	return first arrival
+
+
+create next arrival function (takes in arrival and interval)
+	while next arrival is earlier than current time,
+		add train interval to arrival time
+
+	return next arrival
+
+create "time until" function (takes in next arrival)
+	time until = next arrival - current time
+	convert time until with moment to just be Minutes
+	return time until
+
+Create Document onready function
+
+	create submit function on click,
+		prevent default
+
+		if all forms are filled
+			set name as variable
+			set destination as variable
+			set initial arrival as variable
+			set frequency as variable
+			run first arrival function using initial arrival and frequency (returning next arrival)
+
+			push all 5 variables into database
+
+			empty form
+	
+	database reference on child added (snapshot)
+
+		Set each variable equal to that in firebase
+		
+		run next arrival function
+
+		rum time until function
+
+		create variable for this row
+
+		create variable for cell
+		insert corresponding variable as text
+		append this cell to this row
+			(do this previous step for all five variables that need to be appended)
+
+		append this row to table.
+
+	
+
+		
+
+	
+
