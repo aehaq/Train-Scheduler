@@ -12,7 +12,7 @@ container
 	full width card
 		Train name form
 		Destination Form
-		First Train Time form (military time)
+		First Train Time form
 		Frequency form
 		submit button
 
@@ -35,6 +35,7 @@ create first arrival function that takes in initial arrival
 
 
 create next arrival function (takes in arrival and interval)
+	set next arrival = to arrival
 	while next arrival is earlier than current time,
 		add train interval to arrival time
 
